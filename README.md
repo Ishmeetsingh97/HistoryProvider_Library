@@ -23,7 +23,7 @@ dependencies {
 These steps are required to implement HistoryProvider in your Android Project:<br/>
 1. Make a new class and `implements` Cursor Loader `android.app.LoaderManager.LoaderCallbacks<Cursor>` and Override all the methods.<br/>
 2. Make an `Listview` and make an Adapter for it.<br/>
-3. In the MainActivity, Define an EditText by `findViewById()`  and make a method to store and words in the Database like this:<br/>
+3. In the MainActivity, Define an EditText by `findViewById()`  and make a method to store words in the Database like this:<br/>
 ```groovy
 String name = EditText_Name.getText().toString().trim();
 ContentValues values = new ContentValues();
