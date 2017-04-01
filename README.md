@@ -2,17 +2,17 @@
 [![API](https://img.shields.io/badge/API-10%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=10)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-HistoryProvider-green.svg?style=flat)](https://android-arsenal.com/details/1/5042)
 [![Android Dev Digest](https://img.shields.io/badge/Android%20Dev%20Digest-%23126-cyan.svg)](https://www.androiddevdigest.com/digest-126/)
-[![License](http://img.shields.io/:license-Apache 2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)<br/>
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)<br/>
 History Provider is a simple library that stores your typed history inside a Database using the concept of Content providers, making the history database available to any application in the phone.<br/><br/>
 ![alt tag](https://github.com/Ishmeetsingh97/HistoryProvider_Library/blob/master/HistoryProvider.gif)
-##Installation
-####Add gradle dependency with command:
+## Installation
+#### Add gradle dependency with command:
 ```groovy
 dependencies {
     compile 'org.ishmeetsingh.androbot:historyprovider:1.0.0'
     }
 ```
-####By using Maven:
+#### By using Maven:
 ```groovy
 <dependency>
   <groupId>org.ishmeetsingh.androbot</groupId>
@@ -21,7 +21,7 @@ dependencies {
   <type>pom</type>
 </dependency>
 ```
-##Implementation
+## Implementation
 These steps are required to implement HistoryProvider in your Android Project:<br/>
 1. Make a new class and `implements` Cursor Loader `android.app.LoaderManager.LoaderCallbacks<Cursor>` and Override all the methods.<br/>
 2. Make an `Listview` and make an Adapter for it.<br/>
@@ -32,8 +32,8 @@ ContentValues values = new ContentValues();
 values.put(WordContract.WordEntry.COLUMN_WORD_NAME,name);
 Uri newUri = getContentResolver().insert(WordContract.WordEntry.CONTENT_URI, values);
 ```
-###FULL IMPLEMENTATION FOR ABOVE STEPS IS PROVIDED IN THE SAMPLE APP.
-##Additional Important Requirement:
+### FULL IMPLEMENTATION FOR ABOVE STEPS IS PROVIDED IN THE SAMPLE APP.
+## Additional Important Requirement:
  Define the Content Provider in the Manifest file like this(No Values should be changed here excluding the provider name):
 ```groovy
 <provider
@@ -43,4 +43,4 @@ android:enabled="true"
 android:exported="true"
 android:multiprocess="true" />
 ```
-####For any problems using HistoryProvider, Refer the Sample App or Contact me at `ishmeet.1136@gmail.com`
+#### For any problems using HistoryProvider, Refer the Sample App or Contact me at `ishmeet.1136@gmail.com`
